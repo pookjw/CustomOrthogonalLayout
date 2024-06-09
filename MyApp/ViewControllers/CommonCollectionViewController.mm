@@ -164,4 +164,8 @@ __attribute__((objc_direct_members))
     }
 }
 
+- (void)_collectionView:(UICollectionView *)collectionView orthogonalScrollViewDidScroll:(/* _UICollectionViewOrthogonalScrollView * */__kindof UIScrollView *)scrollView section:(NSInteger)section {
+    
+}
+
 @end
