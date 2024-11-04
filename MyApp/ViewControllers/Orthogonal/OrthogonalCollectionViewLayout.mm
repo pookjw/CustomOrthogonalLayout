@@ -33,8 +33,8 @@ OBJC_EXPORT id objc_msgSendSuper2(void); /* objc_super superInfo = { self, [self
 
 @interface OrthogonalCollectionViewLayout ()
 @property (class, assign, readonly, nonatomic, direct) void *preferredLayoutAttributesKey;
-@property (retain, nonatomic, direct) NSMutableDictionary<NSIndexPath *, UICollectionViewLayoutAttributes *> *layoutAttributesByIndexPath;
-@property (retain, nonatomic, direct) NSMutableDictionary<NSNumber *, id> *sectionDescriptorsBySectionIndex;
+@property (retain, nonatomic, direct, readonly) NSMutableDictionary<NSIndexPath *, UICollectionViewLayoutAttributes *> *layoutAttributesByIndexPath;
+@property (retain, nonatomic, direct, readonly) NSMutableDictionary<NSNumber *, id> *sectionDescriptorsBySectionIndex;
 @property (nonatomic) CGSize collectionViewContentSize;
 @end
 
