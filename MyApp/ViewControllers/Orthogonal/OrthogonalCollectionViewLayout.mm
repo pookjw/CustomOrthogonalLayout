@@ -216,17 +216,17 @@ OBJC_EXPORT id objc_msgSendSuper2(void); /* objc_super superInfo = { self, [self
     return NO;
 }
 
-- (NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    NSMutableArray<__kindof UICollectionViewLayoutAttributes *> *results = [NSMutableArray new];
-    
-    [self.layoutAttributesByIndexPath.allValues enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (CGRectIntersectsRect(obj.frame, rect)) {
-            [results addObject:obj];
-        }
-    }];
-    
-    return [results autorelease];
-}
+//- (NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
+//    NSMutableArray<__kindof UICollectionViewLayoutAttributes *> *results = [NSMutableArray new];
+//    
+//    [self.layoutAttributesByIndexPath.allValues enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        if (CGRectIntersectsRect(obj.frame, rect)) {
+//            [results addObject:obj];
+//        }
+//    }];
+//    
+//    return [results autorelease];
+//}
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     return self.layoutAttributesByIndexPath[indexPath];
